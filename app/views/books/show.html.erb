@@ -1,0 +1,17 @@
+<h2>Book detail</h2>
+  <table>
+    <tbody>
+      <tr>
+        <th><%= attachment_image_tag @book.user, :profile_image, :fill, 60, 60, format: 'jpeg' %></th>
+        <th><%= link_to @book.title, book_path(@book.id) %></th>
+        <th><%= @book.body %></th>
+        <% if @book.user == current_user.id %>
+          <th><%= link_to "Edit",edit_book_path(@book.id) %></th>
+          <th><%= link_to "Destroy",book_path(@book.id), method: :delete, "data-confirm" => "Are you sure？"  %></th>
+        <% else %>
+        <th></th>
+        <th></th>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
