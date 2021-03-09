@@ -1,3 +1,13 @@
+<% if @user.errors.any? %>
+  <div>
+    <h3><%= @user.errors.count %>error prohibited this book from being saved:</h3>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 <h1>User info</h1>
 <%= form_with model:@user, local:true do |f| %>
   <label>Name</label><br />
