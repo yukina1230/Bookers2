@@ -1,5 +1,5 @@
 <%= flash[:success] %>
-<%= render 'books/list', book: @book %>
+<%= render partial: 'books/list', locals:{ book: @book, user: @user} %>
 <h2>Books</h2>
 <table>
   <thead>

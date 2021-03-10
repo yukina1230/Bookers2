@@ -12,50 +12,50 @@
 
   <body>
     <header>
-    <%= link_to "Bookers", root_path %>
-    <% if user_signed_in? %>
-      <li>
-        <%= link_to user_path(current_user), class: "btn btn-danger text-white", method: :get do %>
-          <i class="fas fa-home">Home</i>
-        <% end %>
-      </li>
-      <li>
-        <%= link_to users_path, class: "btn btn-danger text-white", method: :get do %>
-          <i class="fas fa-users">Users</i>
-        <% end %>
-      </li>
-      <li>
-        <%= link_to books_path, class: "btn btn-danger text-white", method: :get do %>
-          <i class="fas fa-book-open">Books</i>
-        <% end %>
-      </li>
-      <li>
-        <%= link_to destroy_user_session_path, class: "btn btn-danger text-white", method: :delete do %>
-          <i class="fas fa-sign-out-alt">logout</i>
-        <% end %>
-      </li>
-    <% else %>
-      <li>
-        <%= link_to root_path, class: "btn btn-danger text-white", method: :get do %>
-          <i class="fas fa-home">Home</i>
-        <% end %>
-      </li>
-      <li>
-        <%= link_to home_about_path, class: "btn btn-danger text-white", method: :get do %>
-          <i class="fas fa-link">About</i>
-        <% end %>
-      </li>
-      <li>
-        <%= link_to new_user_registration_path, class: "btn btn-danger text-white", method: :get do %>
-          <i class="fas fa-user-plus">sign up</i>
-        <% end %>
-      </li>
-      <li>
-        <%= link_to new_user_session_path, class: "btn btn-danger text-white", method: :get do %>
-          <i class="fas fa-sign-in-alt">log in</i>
-        <% end %>
-      </li>
-    <% end %>
+      <%= link_to "Bookers", root_path %>
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to user_path(current_user), class: "btn btn-danger text-white", method: :get do %>
+            <i class="fas fa-home">Home</i>
+          <% end %>
+       </li>
+        <li>
+          <%= link_to users_path, class: "btn btn-danger text-white", method: :get do %>
+            <i class="fas fa-users">Users</i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to books_path, class: "btn btn-danger text-white", method: :get do %>
+            <i class="fas fa-book-open">Books</i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to destroy_user_session_path, class: "btn btn-danger text-white", method: :delete do %>
+            <i class="fas fa-sign-out-alt">logout</i>
+          <% end %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to root_path, class: "btn btn-danger text-white", method: :get do %>
+            <i class="fas fa-home">Home</i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to home_about_path, class: "btn btn-danger text-white", method: :get do %>
+            <i class="fas fa-link">About</i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_user_registration_path, class: "btn btn-danger text-white", method: :get do %>
+            <i class="fas fa-user-plus">sign up</i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_user_session_path, class: "btn btn-danger text-white", method: :get do %>
+            <i class="fas fa-sign-in-alt">log in</i>
+          <% end %>
+        </li>
+      <% end %>
     </header>
     <main>
       <p class="notice"><%= notice %></p>

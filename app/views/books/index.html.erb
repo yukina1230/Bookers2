@@ -8,7 +8,7 @@
     </ul>
   </div>
 <% end %>
-<%= render 'books/list', book: @book %>
+<%= render partial: 'list',locals:{ book: @book, user: @user} %>
 <h2>Books</h2>
 <table>
   <thead>
