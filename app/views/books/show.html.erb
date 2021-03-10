@@ -2,12 +2,14 @@
 <%= flash[:value] %>
 <%= render partial: 'list', locals:{ book: @book_new, user: @user} %>
 <h2>Book detail</h2>
-  <table>
+  <table class="table"3>
     <tbody>
       <tr>
         <th>
-          <%= attachment_image_tag @book.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
-          <%= link_to @book.user.name, user_path(@book.user.id) %>
+          <%= link_to user_path(@book.user.id) do %>
+            <%= attachment_image_tag @book.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %><br>
+            <%= @book.user.name %>
+          <% end %>
         </th>
         <th>
           <%= link_to @book.title, book_path(@book.id) %>
@@ -17,10 +19,10 @@
         </th>
         <% if @book.user_id == current_user.id %>
           <th>
-            <%= link_to "Edit",edit_book_path(@book.id) %>
+            <%= link_to "Edit",edit_book_path(@book.id), class: "btn btn-success" %>
           </th>
           <th>
-            <%= link_to "Destroy",book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか？"  %>
+            <%= link_to "Destroy",book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか？", class: "btn btn-danger"  %>
           </th>
         <% else %>
         <th></th>
@@ -29,3 +31,4 @@
       </tr>
     </tbody>
   </table>
+</div>

@@ -8,15 +8,21 @@
     </ul>
   </div>
 <% end %>
-<h2>Editing Book</h2>
-<%= form_with model:@book, local:true do |f| %>
-  <h4>Title</h4>
-  <%= f.text_field :title %>
-  <h4>Option</h4>
-  <%= f.text_area :body %>
-  <%= f.submit 'Update Book' %>
-<% end %>
+<div class="container">
+   <div class="row">
+      <div class="mx-auto">
+        <h2>Editing Book</h2>
+        <%= form_with model:@book, local:true do |f| %>
+          <h4>Title</h4>
+          <%= f.text_field :title %>
+          <h4>Option</h4>
+          <%= f.text_area :body %><br>
+          <%= f.submit 'Update Book', class: "btn btn-success" %>
+        <% end %>
 
-<p class="link"><%= link_to "Show",book_path(@book.id) %></p>
-<p class="link">|</p>
-<p class="link"><%= link_to "Back",books_path %></p>
+        <div class="d-inline"><%= link_to "Show",book_path(@book.id) %></div>
+        <div class="d-inline">|</div>
+        <div class="d-inline"><%= link_to "Back",books_path %></div>
+      </div>
+   </div>
+</div>
