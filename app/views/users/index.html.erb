@@ -1,20 +1,4 @@
-<h2>User info</h2>
-<% if user_signed_in? %>
-　<p><%= attachment_image_tag current_user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %></p>
-　　<table>
-　　 <tbody>
-       <tr>
-         <th>name</th>
-         <th><%= current_user.name %></th>
-       </tr>
-       <tr>
-         <th>introduction</th>
-         <th><%= current_user.introduction %></th>
-       </tr>
-  　 </tbody>
-  　</table>
-<% end %>
-<h2>New book</h2>
+<%= render 'books/list', book: @book %>
 <h2>Users</h2>
 <table>
   <thead>
