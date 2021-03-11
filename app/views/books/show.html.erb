@@ -1,5 +1,4 @@
-<%= flash[:notice] %>
-<%= flash[:value] %>
+<p class="text-success"><%= flash[:notice] %></p>
 <%= render partial: 'list', locals:{ book: @book_new, user: @user} %>
 <h2>Book detail</h2>
   <table class="table"3>
