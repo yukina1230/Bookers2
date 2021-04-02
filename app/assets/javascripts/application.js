@@ -20,13 +20,3 @@
 //= require turbolinks
 //= require_tree .
 
-/*global $*/
-$(function() {
-     $(".favorite").click(function() {
-          if($(this).css("color")=="#ff0000") {
-               $(this).css("color", "0000ff");
-          } else {
-               $(this).css("color", "ff0000");
-          }
-     });
-});
