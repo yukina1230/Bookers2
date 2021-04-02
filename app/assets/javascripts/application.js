@@ -14,7 +14,15 @@
 //= require popper
 //= require bootstrap-sprockets
 
+//= require jquery
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+/*global $*/
+$(document).ready(function () {
+  $('.favorite').on('click', function(){
+    $('.favorite').css('color','red');
+  });
+});
