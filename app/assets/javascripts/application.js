@@ -21,8 +21,12 @@
 //= require_tree .
 
 /*global $*/
-$(document).ready(function () {
-  $('.favorite').on('click', function(){
-    $('.favorite').css('color','red');
-  });
+$(function() {
+     $(".favorite").click(function() {
+          if($(this).css("color")=="#ff0000") {
+               $(this).css("color", "0000ff");
+          } else {
+               $(this).css("color", "ff0000");
+          }
+     });
 });
